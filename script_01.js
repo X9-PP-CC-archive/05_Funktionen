@@ -43,13 +43,28 @@ function ausgabeNamenParam(firstName) // Fkt mit Parameter
 /***** Funktionen 02c *****/
 // 2c. Mehrere Parameter
 
-ausgabeNamenParams("Joe","Kaeser");
-ausgabeNamenParams(prompt("Vornamen?: "),prompt("Nachnamen?: "));
+// ausgabeNamenParams("Joe","Kaeser");
+// ausgabeNamenParams(prompt("Vornamen? :"),prompt("Nachnamen? :"));
 
 function ausgabeNamenParams(firstName, familyName) // Fkt mit Parameter
 {
     console.log("Hallo " + firstName + " " + familyName + "!");
 }
 
+/***** Funktionen 03a *****/
+// 03a. Vorbereitung
+// Postulat: one function = one job (uncle Bob)
+// SRP single responsibility principle
 
+ausgabeNamenParams2("Joe","Kaeser");
+
+function ausgabeNamenParams2(firstName, familyName)
+{
+     // 1. Funktionalität: string composing
+     const GAP = " ";
+     let outputStr = "Hallo" + GAP + firstName + GAP + familyName + "!"
+    
+    // 2. Funktionalität: string output
+    console.log(outputStr);
+}
 
